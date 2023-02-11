@@ -38,7 +38,15 @@ export default {
         products.value = await res.json(); 
     });
 
-    return {products}
+    const del = async(id) => {
+        await fetch('httpls://localhost:3000/products/${id}', {
+            method: 'DELETE'
+        })
+    }
+
+    products.value = products.value.filter(p => p.id !==id);
+
+    return { products, del }
   },
 };
 </script>
