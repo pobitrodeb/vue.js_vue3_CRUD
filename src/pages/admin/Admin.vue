@@ -1,6 +1,13 @@
 <template>
    <Nav/>
-   <SideBar/>
+    <div class="wrraper">
+        <div class="left-content">
+            <SideBar/>
+        </div>
+        <div class="right-content">
+           <router-view/>
+        </div>
+    </div>
  <router-view/>
 </template>
 
